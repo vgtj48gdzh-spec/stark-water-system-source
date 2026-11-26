@@ -1,0 +1,135 @@
+:root {
+  color: #182235;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7fb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.table-panel {
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+.delivery-summary,
+.dialog-alert {
+  margin-bottom: 14px;
+}
+
+.form-hint {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.form-hint.danger {
+  color: #c2410c;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  min-height: 92px;
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px;
+}
+
+.stat-label {
+  color: #5d6678;
+  font-size: 13px;
+}
+
+.stat-value {
+  margin-top: 8px;
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.drawer-section {
+  margin-bottom: 16px;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 1100px) {
+  .stat-grid {
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .form-grid,
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    align-items: stretch;
+  }
+}
